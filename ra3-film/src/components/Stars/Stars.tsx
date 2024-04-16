@@ -5,7 +5,7 @@ interface StarsProps {
 }
 
 const Stars = ({ count = 0 }: StarsProps) => {
-  if (typeof count !== 'number' || count < 1 || count > 5) {
+  if (count < 1 || count > 5) {
     return null;
   }
 

@@ -45,7 +45,8 @@ const Listing = ({ items = [] }: ListingProps) => {
             </div>
           );
         } else {
-          const imageUrl = item.MainImage && item.MainImage.url_570xN ? item.MainImage.url_570xN : 'path_to_default_image.jpg';
+          //!!! const imageUrl = item.MainImage && item.MainImage.url_570xN ? item.MainImage.url_570xN : 'path_to_default_image.jpg';
+          const imageUrl = item.MainImage?.url_570xN ?? 'path_to_default_image.jpg';
 
           return (
             <div key={item.listing_id} className="item">
